@@ -291,23 +291,3 @@ Ao final da execução, os dois servidores ficam com Apache, MariaDB e PHP confi
 ![WordPress no CentOS](imagens/15-wordpress-centos.png)
 *WordPress rodando no servidor CentOS Stream 10.*
 
----
-
-## 🛠️ Adaptações em relação ao curso
-
-O curso foi construído para versões antigas (**CentOS 7** e **PHP 7.3**). Para funcionar nas versões atuais, fiz estas adaptações:
-
-- 🔄 **Módulo `include` → `include_tasks`:** o `include` foi removido nas versões recentes do Ansible.
-- 📦 **Pacotes `php7.3-*` → pacotes genéricos `php-*`:** instalam a versão do PHP disponível no sistema, em vez de uma versão fixa que não existe mais nos repositórios.
-- 🧹 **Remoção do `php-mysql` no CentOS:** o pacote foi substituído pelo `php-mysqlnd`.
-- 🔌 **Caminho do PHP-FPM no template do site:** o caminho fixo `php7.3-fpm.sock` foi trocado pelo atalho genérico `php-fpm.sock`, que aponta sempre para a versão instalada. Sem isso, o Apache retornava *Service Unavailable*.
-- 🏷️ **Correção de nomes de handlers:** alguns nomes não correspondiam às chamadas nas tarefas (`notify`), o que interrompia a execução.
-
----
-
-## 👤 Autor
-
-**Davi Parente**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-daviparente-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daviparente/)
-[![GitHub](https://img.shields.io/badge/GitHub-DaviParente10-181717?logo=github&logoColor=white)](https://github.com/DaviParente10)
