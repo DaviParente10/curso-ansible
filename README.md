@@ -45,7 +45,7 @@ Automatizar, a partir de um **único playbook**, a preparação completa de dois
 
 O playbook instala e configura o banco de dados MariaDB, o servidor web Apache e o PHP, além de criar o site e baixar o WordPress, **identificando automaticamente a distribuição de cada servidor** para aplicar os comandos corretos.
 
-O projeto foi desenvolvido como laboratório de estudo, com base em um curso de Ansible, e **adaptado para versões atuais** dos sistemas operacionais e dos pacotes.
+O projeto foi desenvolvido como laboratório de estudo, com base em um curso de Ansible do canal Mario Santana (https://www.youtube.com/watch?v=Os0Uo5VXxNU&list=PLORF-y_edVoDQnky9u2OgyrfirE1dhutX).
 
 ---
 
