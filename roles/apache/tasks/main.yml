@@ -1,0 +1,21 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for apache
+- name: Inclui redhat.yml
+  ansible.builtin.include_tasks: redhat.yml
+  when: (ansible_facts['os_family'] == "RedHat")
+
+- name: Inclui debian.yml
+  ansible.builtin.include_tasks: debian.yml
+  when: (ansible_facts['os_family'] == "Debian")
+
+- name: "Cria diretório que irá hospedar os arquivos do site"
+  file:
+    path: "{{ site_folder }}"
+    state: directory
+    mode: '0755'
+
+- name: "Copia arquivo index.html simples"
+  copy:
+    src: index.html
+    dest: "{{ site_folder }}"

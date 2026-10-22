@@ -1,0 +1,62 @@
+---
+- hosts: all
+  become: yes
+
+  vars:
+    aulas_linux: /home/davi
+
+  tasks:
+  - name: "Instalação Curl - Ubuntu"
+    apt:
+      update_cache: yes
+      name: "curl"
+      state: present
+
+  tasks:
+  - name: "Instalação Curl - CentOS"
+    yum:
+      update_cache: yes
+      name: "curl"
+      state: present
+    when: (ansible_facts['distribution'] == "CentOS")
+  
+  - name: "Instalação nslookup - CentOS"
+    yum:
+      update_cache: yes
+      name: "curl"
+      state: present
+    when: (ansible_facts['distribution'] == "CentOS")
+
+  - name: "Criação arquivo para anotações"
+    file:
+      path: "{{ aulas_linux }}/anotacoes.txt"
+      state: touch
+      owner: davi
+      group: davi
+      modification_time: preserve
+      access_time: preserve
+    when: (ansible_facts['distribution'] == "Ubuntu")
+
+  - name: "Data de execução do comando:"
+    shell: "date -u"
+    register: data_execucao
+  
+  - name: "Exibindo data"
+    debug:
+      msg: "{{ data_execucao.stdout }}"
+
+  - name: "Exibe hostname das máquinas:"
+    shell: hostname
+    register: exibe_hostname
+  
+  - name: "Exibindo hostname das máquinas:"
+    debug:
+      msg: "{{ exibe_hostname.stdout }}"
+
+  - name: "Exibe IP das máquinas:"
+    shell: "hostname -I"
+    register: informacoes_rede
+
+  - name: "Exibindo IP das máquinas"
+    debug:
+      msg: "{{ informacoes_rede }}"

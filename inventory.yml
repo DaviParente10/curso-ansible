@@ -1,0 +1,4 @@
+[centos]
+192.168.58.135 hostname=srv-centos-01
+[ubuntu]
+192.168.58.130 hostname=srv-debian-01

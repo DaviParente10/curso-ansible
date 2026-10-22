@@ -1,0 +1,8 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for apache
+site_folder: "/var/www/davi_local"
+site_url: "www.davi.local"
+site_domain: "davi.local"
+log_prefix: "davi.local"
+php_version: "7.3"

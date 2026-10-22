@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MIT-0
+---
+# handlers file for php
+- name: 'ReiniciaHttpd'
+  service:
+    name: httpd
+    state: restarted
