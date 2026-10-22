@@ -5,7 +5,11 @@
 ![CentOS](https://img.shields.io/badge/CentOS_Stream-10-262577?logo=centos&logoColor=white)
 ![Proxmox](https://img.shields.io/badge/Proxmox_VE-9.2.2-E57000?logo=proxmox&logoColor=white)
 
-Provisionamento automatizado de um servidor web com **Apache, MariaDB, PHP e WordPress** em duas distribuições Linux diferentes, a partir de um único playbook Ansible.
+Projeto de provisionamento automatizado de um servidor web com **Apache, MariaDB, PHP e WordPress** em duas distribuições Linux diferentes, a partir de um único playbook Ansible.
+
+Este repositório é o projeto final proposto pelo curso de Ansible do canal Mario Santana: https://www.youtube.com/watch?v=Os0Uo5VXxNU&list=PLORF-y_edVoDQnky9u2OgyrfirE1dhutX
+
+Segue estrutura que adotei para desenvolver este projeto:
 
 ![Arquitetura do laboratório](imagens/00-arquitetura.png)
 
