@@ -24,7 +24,6 @@ Provisionamento automatizado de um servidor web com **Apache, MariaDB, PHP e Wor
 - [Verificação dos servidores](#-verificação-dos-servidores)
 - [Segurança das credenciais](#-segurança-das-credenciais)
 - [Resultado](#-resultado)
-- [Adaptações em relação ao curso](#️-adaptações-em-relação-ao-curso)
 
 ---
 
